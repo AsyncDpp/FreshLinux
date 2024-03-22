@@ -20,8 +20,9 @@ sudo apt install curl
 sudo apt install docker.io
 # para dar permisos en docker
 sudo usermod -aG docker XXXX (siendo XXXX el nombre usuario)
-
 sudo apt install docker-compose
+
+Reiniciar PC para que se apliquen los cambios en la configuración del grupo de usuarios de Docker.
 
 # Sin terminal:
 Instalar extension manager con el asistente de aplicaciones. Después usarlo para instalar Allow locked remote conections (o algo así. Buscar "allow" y sale).
