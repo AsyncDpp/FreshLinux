@@ -1,21 +1,3 @@
-version: '3'
+# No consigo que funcione con docker-compose porque tengo que utilizar network=host. Pongo el comando docker. El servicio corre por el puerto 8080
 
-services:
-  ollama:
-    image: ollama/ollama
-    container_name: ollama
-    ports:
-      - "11434:11434"
-    volumes:
-      - ./ollama:/root/.ollama
-    restart: unless-stopped
-
-  open-webui:
-    image: ghcr.io/open-webui/open-webui:main
-    container_name: open-webui
-    ports:
-      - "8282:8080"
-    network_mode: "host"
-    volumes:
-      - ./open-webui:/app/backend/data
-    restart: unless-stopped
+docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
