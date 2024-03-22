@@ -2,25 +2,25 @@
 Pasos a seguir para una instalación reciente de Linux
 
 # Actualizar todos los paquetes:
-sudo apt update && apt upgrade -y
+```sudo apt update && apt upgrade -y```
 
 # Comprobar si el comando sudo está instalado intentando instalar el paquete:
-apt install sudo
+```apt install sudo```
 # Dar permisos sudo al usuario XXXX:
-usermod -aG sudo XXXX
+```usermod -aG sudo XXXX```
 
 # Instalar SSH:
-sudo apt install openssh-server
-comprobar que está activo con systemctl status ssh (o sshd)
+```sudo apt install openssh-server```  
+Comprobar que está activo con systemctl status ssh (o sshd)
 
 # Instalar curl:
-sudo apt install curl
+```sudo apt install curl```
 
 # Instalar Docker y Docker-compose:
-sudo apt install docker.io
+```sudo apt install docker.io```
 # para dar permisos en docker
-sudo usermod -aG docker XXXX (siendo XXXX el nombre usuario)
-sudo apt install docker-compose
+```sudo usermod -aG docker XXXX``` (siendo XXXX el nombre usuario)  
+```sudo apt install docker-compose```
 
 Reiniciar PC para que se apliquen los cambios en la configuración del grupo de usuarios de Docker.
 
