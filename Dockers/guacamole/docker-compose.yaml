@@ -1,21 +1,13 @@
 version: "3"
 
 services:
-
   guacamole:
-
     image: abesnier/guacamole
-
     container_name: guacamole
-
     volumes:
-
       - ./data/:/config
-
     ports:
-
       - 25333:8080
-
     restart: unless-stopped
 
 # usuario y pass por defecto: guacadmin
