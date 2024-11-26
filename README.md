@@ -36,7 +36,14 @@ sudo usermod -aG docker XXXX
 ```
 (siendo XXXX el nombre usuario)  
 ```
-sudo apt install docker-compose
+sudo curl -SL https://github.com/docker/compose/releases/download/v2.28.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+```
+```
+sudo chmod +x /usr/local/bin/docker-compose
+```
+Comprobar versión de docker compose:
+```
+docker-compose -v
 ```
 
 Reiniciar PC para que se apliquen los cambios en la configuración del grupo de usuarios de Docker.
