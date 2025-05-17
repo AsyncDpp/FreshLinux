@@ -14,6 +14,15 @@ apt install sudo
 ```
 usermod -aG sudo XXXX
 ```
+# Dar permisos de grupo www-data al usuario XXXX:
+```
+sudo usermod -aG www-data XXXX
+```
+Los permisos no se actualizan hasta que reinicias el equipo. Después de reiniciar comprobar permisos del usuario con el comando:
+```
+groups
+```
+
 
 # Instalar SSH:
 ```
